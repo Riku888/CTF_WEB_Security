@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" id="login" href="/login">Login</a>
+            <!-- Sign-up page is disabled -->
+            <!-- <a class="nav-item nav-link" id="SignUp" href="/sign-up">Sign Up</a> -->
+          </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header-content">
+            <h1>Step1</h1>
+            <p>Goal: Find robots.txt🎯</p>
+        </div>
+    </header>
+    
+    <nav class="nav" style="display: flex; justify-content: center; align-items: center; text-align: center; position: relative;" >
+        <ul>
+            <li><a href="{{url_for('auth.tutorial')}}">Home </a></li>
+            <li><a href="{{url_for('auth.step1')}}">Step 1</a></li>
+            <li><a href="{{url_for('auth.step2')}}">Step 2</a></li>
+            <li><a href="{{url_for('auth.step3')}}">Step 3</a></li>
+            <li><a href="{{url_for('auth.step4')}}">Step 4</a></li>
+            <li><a href="{{url_for('auth.step5')}}">Step 5</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section id="step1">
+            <h2>What is robots.txt?🔍</h2>
+            <p>Imagine you are visiting a house, and the owner gives you a list of rooms you are allowed to enter and rooms you should not go into. robots.txt is like that list, but for websites. It’s a special file that tells web robots (like Google or other search engines) which parts of the website they can visit and which parts they should avoid.
+
+                Why is it important?
+                Websites use robots.txt to control which pages are seen by search engines and which ones are kept private.</p>
+            <img src="{{ url_for('static', filename='images/robots.jpg') }}" alt="Image for home" style="display: block; margin-left: auto; margin-right: auto;" class="tutorial-image">
+        
+        <section id="step2">
+            <h2>What does it mean?</h2>
+            <li><strong>User-agent: *</strong> This tells the robots which ones the rules apply to. </li>
+            <li><strong>Disallow: </strong>This tells the robots to stay away from the /private/ area of the website. </li>
+            <li><strong>Allow: </strong>This tells the robots they can visit the /public/ area of the website. </li>
+                <p>So, if a robot visits the website, it will follow these rules and only look at the pages it’s allowed to visit.</p>
+             <br>   
+            <h2>Action🚨</h2>
+                <p>Try typing "robots.txt" into the search bar and see what happens.</p>
+                <img src="{{ url_for('static', filename='images/example.jpg') }}" alt="Image for home" style="display: block; margin-left: auto; margin-right: auto;" class="tutorial-image">
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Tutorial Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>

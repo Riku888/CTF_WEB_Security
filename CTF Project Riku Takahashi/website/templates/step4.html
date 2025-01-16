@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" id="login" href="/login">Login</a>
+            <!-- Sign-up page is disabled -->
+            <!-- <a class="nav-item nav-link" id="SignUp" href="/sign-up">Sign Up</a> -->
+          </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header-content">
+            <h1>Step4</h1>
+            <p>Goal: Access the database and retrieve the password🎯</p>
+        </div>
+    </header>
+    
+    <nav class="nav" style="display: flex; justify-content: center; align-items: center; text-align: center; position: relative;">
+        <ul>
+            <li><a href="{{url_for('auth.tutorial')}}">Home </a></li>
+            <li><a href="{{url_for('auth.step1')}}">Step 1</a></li>
+            <li><a href="{{url_for('auth.step2')}}">Step 2</a></li>
+            <li><a href="{{url_for('auth.step3')}}">Step 3</a></li>
+            <li><a href="{{url_for('auth.step4')}}">Step 4</a></li>
+            <li><a href="{{url_for('auth.step5')}}">Step 5</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+    
+            <h2>Inspect a Webpage and Find Hidden Info🔍</h2>
+
+            <p>Inspecting a webpage allows you to view its underlying structure and hidden resources. This can be useful for finding secret information, debugging, 
+                or just understanding how a page is built. In this guide, we'll show you the basics of inspecting a webpage using browser tools.</p>
+            
+        <img src="{{ url_for('static', filename='images/html.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+        <br>
+        <h2>Action🚨</h2>
+            <h2>Step 1: Open Developer Tools🧑‍💻</h2>
+            <p>Most modern web browsers offer a set of developer tools that allow you to inspect the HTML, CSS, and JavaScript behind a webpage. Here's how you can access these tools:</p>
+            <ul>
+                <li>In <strong>Google Chrome</strong>, press <code>Ctrl + Shift + I</code> or right-click anywhere on the page and select <em>Inspect</em>.</li>
+                <li>In <strong>Mozilla Firefox</strong>, press <code>Ctrl + Shift + I</code> or right-click and choose <em>Inspect Element</em>.</li>
+                <li>In <strong>Microsoft Edge</strong>, press <code>F12</code> or right-click and choose <em>Inspect</em>.</li>
+            </ul>
+
+            <img src="{{ url_for('static', filename='images/page-inspection.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+            
+            <br><br>
+            <h2>Step 2: Explore the HTML Structure🕵️</h2>
+            <p>Once the Developer Tools are open, you’ll see the <strong>Elements</strong> tab. This shows the HTML structure of the webpage. You can explore it like a tree:</p>
+            <ul>
+                <li>Inside the <code>&lt;body&gt;</code> tag, you’ll find the content, such as headings, images, and paragraphs, structured in various HTML tags.</li>
+               <br> <li>Within a <code>&lt;form method="POST"&gt;</code> section, you might encounter sensitive information being submitted. This method sends data to the server, and depending on the form’s purpose, it could include credentials, personal data, or hidden fields that could contain secret information.</li>
+            </ul>
+                <p>You can click on any element to highlight it on the page. This helps you see which part of the page corresponds to which part of the code.</p>
+            <img src="{{ url_for('static', filename='images/page-inspection2.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+           
+            <div class="note">
+                <p><strong>Note:</strong> Inspecting a webpage is useful for learning and debugging. However, always respect privacy and legal boundaries. Never attempt to access or manipulate a website without proper authorization.</p>
+            </div>
+
+            <br>
+            <h2>Step 3: Explore the database👁️‍🗨️</h2>
+            <p>Once you access the database, locate the target email address and its associated password. Since the password is hashed, you will need to decrypt it in order to retrieve the original password.</p>
+            <div class="note">
+                <p style="color: rgb(2, 67, 247);"><strong>Tip:</strong> To quickly find a specific email address or password, press <code>Ctrl + F</code> on Windows or <code>Command + F</code> on Mac. Then, type the email address you are looking for, and it will highlight the target address, saving you from manually searching through all the information.</p>
+
+            </div>
+            <img src="{{ url_for('static', filename='images/database.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+
+    </main>
+            <footer class="footer">
+                <p>© 2024 Tutorial Page by Riku Takahashi. All rights reserved.</p>
+            </footer>
+</body>
+</html>

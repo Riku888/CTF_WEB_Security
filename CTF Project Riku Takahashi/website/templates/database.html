@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+    <p style="color: rgb(247, 2, 2);">Access restricted: Only admin users are authorized to view this page.</p>
+    <p style="color: rgb(1, 163, 251);">Database</p>
+    <p>ID: 1, Email: tomcruise3@gmail.com, Name: Tom, Password(sha256):   1000000$dijKD1e4BjMRheHZ$654f4cebfb239bfeaaa7fdb0b09cf3644cdffa3e9504f8e3af635397ffed837a 
+    <br> ID: 2, Email: lovecats9@outlook.com, Name: Emily, Password(sha256):   1000000$hWZDQv7YmWWL2TmI$c6035f632c7aa476b5bb7f413763c32fefea8a5d6fbd479729e2239fecadb16e 
+    <br> ID: 3, Email: melania.trump@government.com, Name: Melania, Password(sha256):   1000000$6A56jOEVT3Q3n9TI$02567fdaae8fe4cba3ad92b5b0f1d6902b15540332cdae
+    <br> ID: 4, Email: admin@byu.edu, Name: BYU, Password(sha256):   1000000$6wNCdEPqIcffqfxj$0ab63160457959af8385815c6fa1a156c4b96a3ba1501bbb9c463ac4f039bdf9 
+    <br> ID: 5, Email: oprawinfrey.fan@yahoo.com, Name: Ken, Password(md5):   1000000$J62NGaTY7DWOSQNm$e569458aa4a30d514972368411fa1210 
+    <br> ID: 6, Email: tominaga.ren23@gmail.com, Name: Ren, Password(md5):   1000000$gFZHO6esl1cJ2Q6A$6ee40d498f03a462d18be9bd7987e4be
+    <br> ID: 7, Email: Joseph.snowboard6@gmail.com, Name: Joseph, Password(md5):   1000000$05tIAqpC3pSF6e8r$1c00adf8062d8024977133a11dce88c5 
+    <br> ID: 8, Email: mantis2@guardians.com, Name: Mantis2, Password(md5): 1000000$M9A8N7T6$t12345abcdef6789ghijklmnopqrstuv 
+    <br> ID: 9, Email: rikusandes@gmail.com, Name: Riku, Password(sha256):   1000000$hKV5Y91Zqxrce2uN$dca08db8b389142ce5ad21d498ccf83c7f518e09ef426799685b09ba22431839 
+    <br> ID: 10, Email: edgarpolo22@gmail.com, Name: Edgar, Password(sha256):   1000000$b2Phnf407oeAkuv7$0dc5ef5cc2afa8d3a8262358803f07f859126b2251b5960d363fd52f438e2340 
+    <br> ID: 11, Email: iloveprovo9@outlook.com, Name: Provo, Password(sha256):   1000000$cBKaraQHL7Ong1qh$9e0bb32204a549583cd4a5d0ad0707c64b49e25a6fac644b128
+    <br> ID: 12, Email: john.smith@domain.com, Name: John, Password(sha256): 1000000$A1B2C3D4$e9a42fbbd42bcd0f3c467f3a62cdb62f
+    <br> ID: 13, Email: alice.wonder@fiction.com, Name: Alice, Password(sha256): 1000000$E5F6G7H8$bc54e3a45dc924e7fcab3e6cd2d45b8e
+    <br> ID: 14, Email: peter.parker@marvel.com, Name: Peter, Password(sha256): 1000000$X9Y8Z7W6$12345abcdef6789ghijklmnopqrstuv
+    <br> ID: 15, Email: bruce.wayne@waynecorp.com, Name: Bruce, Password(sha256): 1000000$R3D4B5L6$1a2b3c4d5e6f7g8h9i0jklmnopqrstuv
+    <br> ID: 16, Email: diana.prince@themyscira.com, Name: Diana, Password(md5): 1000000$W0N8R2E1$abcdef1234567890abcdef1234567890
+    <br> ID: 17, Email: clark.kent@dailyplanet.com, Name: Clark, Password(md5): 1000000$K5E6N7T9$bcde5678f9a01234bcde5678f9a01234
+    <br> ID: 18, Email: barry.allen@starlabs.com, Name: Barry, Password(md5): 1000000$S4P3E2D1$fghij4567890abcd5678efghij4567890
+    <br> ID: 19, Email: tony.stark@starkindustries.com, Name: Tony, Password(md5): 1000000$R1C4H3D2$ijklmn7890abcde3456ijklmn7890abc
+    <br> ID: 20, Email: natasha.romanoff@shield.com, Name: Natasha, Password(sha256): 1000000$B6A5T4M3$n12345abcdef6789ghijklmnopqrstuv
+    <br> ID: 21, Email: steve.rogers@avengers.com, Name: Steve, Password(sha256): 1000000$C7A6P5T4$o12345abcdef6789ghijklmnopqrstuv
+    <br> ID: 22, Email: bruce.banner@hulk.com, Name: Bruce, Password(md5): 1000000$H1A3P2N4$pqrst5678uvwx012pqrst5678uvwx012
+    <br> ID: 23, Email: wanda.maximoff@scarletwitch.com, Name: Wanda, Password(sha256): 1000000$S8A7W6M5$r12345abcdef6789ghijklmnopqrstuv
+    <br> ID: 24, Email: tchal@wakanda.com, Name: T’Challa, Password(md5): 1000000$P1R2E3A4$x7890bcde5678ghijx7890bcde5678ghij
+    <br> ID: 25, Email: scott.lang@quantum.com, Name: Scott, Password(md5): 1000000$Q1U2A3N4$y12345abcdef6789ghijklmnopqrstuv
+    <br> ID: 26, Email: peter.quill@guardians.com, Name: Peter, Password(sha256): 1000000$G7A8L9X2$a12345abcdef6789ghijklmnopqrstuv
+<br> ID: 27, Email: gamora@guardians.com, Name: Gamora, Password(md5): 1000000$H4E5G6P7$b7890cdef5678ghijb7890cdef5678ghij
+<br> ID: 28, Email: groot@guardians.com, Name: Groot, Password(sha256): 1000000$R2O3T4S5$c12345abcdef6789ghijklmnopqrstuv
+<br> ID: 29, Email: rocket@guardians.com, Name: Rocket, Password(md5): 1000000$L7O8G9R1$d45678bcdef5678ghijd45678bcdef5678
+<br> ID: 30, Email: nebula@guardians.com, Name: Nebula, Password(sha256): 1000000$M6E5L4G3$e12345abcdef6789ghijklmnopqrstuv
+<br> ID: 31, Email: sam.wilson@falcon.com, Name: Sam, Password(md5): 1000000$F4A5L6C7$f67890abcdef1234ghijk67890abcdef1234
+<br> ID: 32, Email: shuri@wakanda.com, Name: Shuri, Password(sha256): 1000000$W1K2N3D4$g12345abcdef6789ghijklmnopqrstuv
+<br> ID: 33, Email: okoye@wakanda.com, Name: Okoye, Password(md5): 1000000$O5K6Y7E8$h7890bcde5678ghijh7890bcde5678ghij
+<br> ID: 34, Email: mbaku@wakanda.com, Name: M’Baku, Password(sha256): 1000000$M8B9A1K2$j12345abcdef6789ghijklmnopqrstuv
+<br> ID: 35, Email: erik.killmonger@wakanda.com, Name: Erik, Password(md5): 1000000$K7I8L9E3$k12345abcdef6789ghijklmnopqrstuv
+<br> ID: 36, Email: carol.danvers@captainmarvel.com, Name: Carol, Password(sha256): 1000000$C2A3P4T5$l12345abcdef6789ghijklmnopqrstuv
+<br> ID: 37, Email: nick.fury@shield.com, Name: Nick, Password(md5): 1000000$S3H4I5E6$m56789bcde1234ghijm56789bcde1234ghij
+<br> ID: 38, Email: phil.coulson@shield.com, Name: Phil, Password(sha256): 1000000$A1G2E3N4$n12345abcdef6789ghijklmnopqrstuv
+<br> ID: 39, Email: maria.hill@shield.com, Name: Maria, Password(md5): 1000000$H6I7L8M9$o12345abcdef6789ghijklmnopqrstuv
+<br> ID: 40, Email: hank.pym@quantum.com, Name: Hank, Password(sha256): 1000000$P9Y8M7Q6$p12345abcdef6789ghijklmnopqrstuv
+<br> ID: 41, Email: hope.van.dyne@quantum.com, Name: Hope, Password(md5): 1000000$V5A4N3D2$q67890abcdef1234ghijk67890abcdef1234
+<br> ID: 42, Email: vision@avengers.com, Name: Vision, Password(sha256): 1000000$A3I4O5N6$r12345abcdef6789ghijklmnopqrstuv
+<br> ID: 43, Email: loki@asgard.com, Name: Loki, Password(md5): 1000000$A7S8G9R1$s12345abcdef6789ghijklmnopqrstuv
+<br> ID: 44, Email: thor@asgard.com, Name: Thor, Password(sha256): 1000000$A4G3O2D1$t12345abcdef6789ghijklmnopqrstuv
+<br> ID: 45, Email: odin@asgard.com, Name: Odin, Password(md5): 1000000$O9D8I7N6$u12345abcdef6789ghijklmnopqrstuv
+<br> ID: 46, Email: valkyrie@asgard.com, Name: Valkyrie, Password(sha256): 1000000$V1A2L3K4$v12345abcdef6789ghijklmnopqrstuv
+<br> ID: 47, Email: hela@asgard.com, Name: Hela, Password(md5): 1000000$H4E3L2A1$w67890abcdef1234ghijk67890abcdef1234
+<br> ID: 48, Email: rocket@milano.com, Name: Rocket, Password(md5): 1000000$C7R6E5T4$x56789abcdef1234ghijk56789abcdef1234
+<br> ID: 49, Email: drax@guardians.com, Name: Drax, Password(sha256): 1000000$D5R4A3X2$y12345abcdef6789ghijklmnopqrstuv
+<br> ID: 50, Email: mantis@guardians.com, Name: Mantis, Password(md5): 1000000$M6A7N8T9$z12345abcdef6789ghijklmnopqrstuv
+<br> ID: 51, Email: wong@kamar-taj.com, Name: Wong, Password(sha256): 1000000$K3A4M5T6$a56789bcdef1234ghijk56789bcdef1234  
+<br> ID: 52, Email: stephen.strange@sanctum.com, Name: Stephen, Password(md5): 1000000$S1T2R3A4$b12345abcdef6789ghijklmnopqrstuv  
+<br> ID: 53, Email: agatha.harkness@magic.com, Name: Agatha, Password(sha256): 1000000$H6A7R8K9$c12345abcdef6789ghijklmnopqrstuv  
+<br> ID: 54, Email: kate.bishop@hawkeye.com, Name: Kate, Password(md5): 1000000$B2I3S4H5$d56789abcdef1234ghijk56789abcdef1234  
+<br> ID: 55, Email: yelena.belova@widow.com, Name: Yelena, Password(sha256): 1000000$B7E6L5O4$e67890abcdef1234ghijk67890abcdef1234  
+    <br> ID: 56, Email: shang.chi@tenrings.com, Name: Shang, Password(md5): 1000000$T9E8N7R6$f12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 57, Email: xu.xialing@tenrings.com, Name: Xialing, Password(sha256): 1000000$X6U5A4L3$g12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 58, Email: dane.whitman@ebonyblade.com, Name: Dane, Password(md5): 1000000$E4B5O6N7$h7890bcdef5678ghijh7890bcdef5678ghij  
+    <br> ID: 59, Email: arishem@celestial.com, Name: Arishem, Password(sha256): 1000000$C2E3L4E5$t12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 60, Email: druig@eternals.com, Name: Druig, Password(md5): 1000000$E6T7E8R9$j45678bcdef1234ghijk45678bcdef1234  
+    <br> ID: 61, Email: ikaris@eternals.com, Name: Ikaris, Password(sha256): 1000000$E8T7E6R5$k12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 62, Email: sersi@eternals.com, Name: Sersi, Password(md5): 1000000$S4E3R2S1$l7890bcdef5678ghijh7890bcdef5678ghij  
+    <br> ID: 63, Email: phastos@eternals.com, Name: Phastos, Password(sha256): 1000000$P7H6A5S4$m12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 64, Email: makkari@eternals.com, Name: Makkari, Password(md5): 1000000$M8A7K6A5$n67890abcdef1234ghijk67890abcdef1234  
+    <br> ID: 65, Email: kingo@eternals.com, Name: Kingo, Password(sha256): 1000000$K5I4N3G2$o12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 66, Email: sprite@eternals.com, Name: Sprite, Password(md5): 1000000$S6P5R4I3$p45678bcdef1234ghijk45678bcdef1234  
+    <br> ID: 67, Email: thanos@titan.com, Name: Thanos, Password(sha256): 1000000$T7I6T5A4$q12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 68, Email: nebula2@guardians.com, Name: Nebula2, Password(md5): 1000000$N3E4B5U6$r67890abcdef1234ghijk67890abcdef1234  
+    <br> ID: 69, Email: gamora2@guardians.com, Name: Gamora2, Password(sha256): 1000000$G8A7M6O5$s12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 70, Email: cosmo@byu.edu, Name: Cosmo, Password(md5):   5f4dcc3b5aa765d61d8327deb882cf99 
+    <br> ID: 71, Email: harry.potter@hogwarts.com, Name: Harry, Password(sha256): 1000000$H1A2R3R4$u12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 72, Email: hermione.granger@hogwarts.com, Name: Hermione, Password(md5): 1000000$H2E3R4M5$v67890abcdef1234ghijk67890abcdef1234  
+    <br> ID: 73, Email: ron.weasley@hogwarts.com, Name: Ron, Password(sha256): 1000000$R5O4N3W2$w12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 74, Email: albus.dumbledore@hogwarts.com, Name: Albus, Password(md5): 1000000$D7U6M5B4$x12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 75, Email: severus.snape@hogwarts.com, Name: Severus, Password(sha256): 1000000$S4N5A6P7$y67890abcdef1234ghijk67890abcdef1234  
+    <br> ID: 76, Email: rubeus.hagrid@hogwarts.com, Name: Rubeus, Password(md5): 1000000$R9U8B7E6$z12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 77, Email: luna.lovegood@hogwarts.com, Name: Luna, Password(sha256): 1000000$L7O8V9E6$a67890abcdef1234ghijk67890abcdef1234  
+    <br> ID: 78, Email: neville.longbottom@hogwarts.com, Name: Neville, Password(md5): 1000000$N8E7V6I5$b12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 79, Email: draco.malfoy@hogwarts.com, Name: Draco, Password(sha256): 1000000$M5A4L3F2$c45678bcdef1234ghijk45678bcdef1234  
+    <br> ID: 80, Email: tom.riddle@hogwarts.com, Name: Tom, Password(md5): 1000000$V9O8L7D6$d12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 81, Email: dolores.umbridge@ministry.com, Name: Dolores, Password(sha256): 1000000$U3M4B5R6$e67890abcdef1234ghijk67890abcdef1234  
+    <br> ID: 82, Email: voldemort@deathlyhallows.com, Name: Voldemort, Password(md5): 1000000$V7O6L5D4$f12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 83, Email: bellatrix.lestrange@deathlyhallows.com, Name: Bellatrix, Password(sha256): 1000000$L4E3S2T1$g67890abcdef1234ghijk67890abcdef1234  
+    <br> ID: 84, Email: lucius.malfoy@deathlyhallows.com, Name: Lucius, Password(md5): 1000000$L3U2C1I4$h12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 85, Email: narcissa.malfoy@deathlyhallows.com, Name: Narcissa, Password(sha256): 1000000$N4A3R2C1$i67890abcdef1234ghijk67890abcdef1234  
+    <br> ID: 86, Email: fenrir.greyback@deathlyhallows.com, Name: Fenrir, Password(md5): 1000000$F6E5N4R3$j7890bcdef5678ghijj7890bcdef5678ghij  
+    <br> ID: 87, Email: basilisk@chamber.com, Name: Basilisk, Password(sha256): 1000000$C3H4A5M6$k12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 88, Email: dobby@elf.com, Name: Dobby, Password(md5): 1000000$E5L4F3D2$l56789abcdef1234ghijk56789abcdef1234  
+    <br> ID: 89, Email: winky@elf.com, Name: Winky, Password(sha256): 1000000$W4I3N2K1$m12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 90, Email: kreacher@elf.com, Name: Kreacher, Password(md5): 1000000$K6R5E4C3$n7890bcdef5678ghijj7890bcdef5678ghij  
+    <br> ID: 91, Email: fluffy@threeheaded.com, Name: Fluffy, Password(sha256): 1000000$T3H4R5E6$o12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 92, Email: aragog@spider.com, Name: Aragog, Password(md5): 1000000$S7P6I5D4$p12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 93, Email: norbert@dragon.com, Name: Norbert, Password(sha256): 1000000$D5R6A7G8$q67890abcdef1234ghijk67890abcdef1234  
+    <br> ID: 94, Email: buckbeak@hippogriff.com, Name: Buckbeak, Password(md5): 1000000$H8I7P6P5$r12345abcdef6789ghijklmnopqrstuv  
+    <br> ID: 95, Email: hedwig@owl.com, Name: Hedwig, Password(sha256): 1000000$O6W5L4$u45678bcdef1234ghijk45678bcdef1234
+    </p>
+
+</P>
+    
+    {% endblock %}
+</body>
+</html>

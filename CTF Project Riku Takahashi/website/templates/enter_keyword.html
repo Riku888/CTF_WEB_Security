@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <p>Enter Password</p>
+</head>
+<body>
+    {% block content %}
+    <p>Database Access is restricted</p>
+    <form method="POST">
+        <input type="text" name="keyword" placeholder="Admin Password" required>
+        <!--Admin Password == admin9rt-->
+        <button type="submit">Access</button>
+    </form>
+    {% endblock %}
+</body>
+</html>

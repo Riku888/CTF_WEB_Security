@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" id="login" href="/login">Login</a>
+            <!-- Sign-up page is disabled -->
+            <!-- <a class="nav-item nav-link" id="SignUp" href="/sign-up">Sign Up</a> -->
+          </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header-content">
+            <h1>Step3</h1>
+            <p>Goal: Decrypt the hashes🎯</p>
+        </div>
+    </header>
+    
+    <nav class="nav" style="display: flex; justify-content: center; align-items: center; text-align: center; position: relative;">
+        <ul>
+            <li><a href="{{url_for('auth.tutorial')}}">Home </a></li>
+            <li><a href="{{url_for('auth.step1')}}">Step 1</a></li>
+            <li><a href="{{url_for('auth.step2')}}">Step 2</a></li>
+            <li><a href="{{url_for('auth.step3')}}">Step 3</a></li>
+            <li><a href="{{url_for('auth.step4')}}">Step 4</a></li>
+            <li><a href="{{url_for('auth.step5')}}">Step 5</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+
+       
+        <img src="{{ url_for('static', filename='images/hash.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+        <br>
+        <h2>What is a Hash?🔍</h2>
+        <p>A hash is like a fingerprint for data. It takes a word, sentence, or file and turns it into a unique, fixed-length code. Think of it like a magical machine that always gives the same result for the same input, but you can’t figure out the original input just by looking at the code.</p>
+        <div class="example">
+            <strong>Example:</strong><br>
+            The word <code>hello</code> might turn into this hash: <code>5d41402abc4b2a76b9719d911017c592</code>.
+        </div>
+    <br>
+        <h2>Why Are Hashes Used?</h2>
+        <p>Hashes are used for many important purposes in technology. Here are some examples:</p>
+        <ul>
+            <li><strong  style="color: rgb(247, 2, 2);">Security:</strong> <br>Hashes help keep passwords safe. Instead of storing the actual password, websites store the hash of the password. This way, even if hackers steal the data, they can’t see the real passwords.</li>
+            <li><strong style="color: rgb(247, 2, 2);">Data Integrity:</strong><br> Hashes are used to check if files or messages have been tampered with. If the hash of a file changes, you know something is wrong.</li>
+            <li><strong style="color: rgb(247, 2, 2);">Blockchain:</strong> <br>Hashes are used in systems like Bitcoin to secure transactions and keep the system running smoothly.</li>
+        </ul>
+    <br>
+        <h2>➤Base64</h2>
+        <p>Base64 is a way to encode information so it can be safely sent or stored. It’s not a hash because you can decode it to see the original text. It’s often used for sending images or files as text.</p>
+        <div class="example">
+            <strong>Example:</strong><br>
+            The word <code>hello</code> in Base64 is: <code>aGVsbG8=</code>.
+        </div>
+       
+    <br>
+        <h2>➤MD5</h2>
+        <p>MD5 is a hashing method that turns data into a unique code. However, it’s not very secure anymore because people have found ways to reverse it. It’s still used for things like file checksums.</p>
+        <div class="example">
+            <strong>Example:</strong><br>
+            The word <code>hello</code> in MD5 is: <code>5d41402abc4b2a76b9719d911017c592</code>.
+        </div>
+       
+    
+        <h2>➤SHA-256</h2>
+        <p>SHA-256 is a much stronger hashing method than MD5. It’s used for things like securing passwords and Bitcoin transactions. It creates a long, unique code that’s almost impossible to reverse.</p>
+        <div class="example">
+            <strong>Example:</strong><br>
+            The word <code>hello</code> in SHA-256 is: <br><code>2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824</code>.
+        </div>
+    <br>
+        <p>Now you know about Base64, MD5, and SHA-256. Each has its use, but remember: hashes like MD5 and SHA-256 are one-way, while Base64 can be decoded back to the original text.</p>
+    <br>
+        <h2>Action🚨</h2>
+               <p>If you come across a hash, try decoding it using the website below. It might be Base64, MD5, or something similar—so give it a shot! And if you uncover something secret, well, I think you know what to do next!</p>
+               <p>Try decoding Base64 at: <a href="https://www.base64decode.org/" target="_blank">https://www.base64decode.org/</a></p>
+               <p>You can find MD5 hashes at: <a href="https://10015.io/tools/md5-encrypt-decrypt" target="_blank">https://10015.io/tools/md5-encrypt-decrypt</a></p>
+               <p>First, make sure you're using the <strong  style="color: rgb(247, 2, 2);">"Decode Mode"</strong>. Select the type of hash you found, and then decrypt it! </p>
+               <img src="{{ url_for('static', filename='images/base64.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+    </body>
+
+   
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Tutorial Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>

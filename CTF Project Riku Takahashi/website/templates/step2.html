@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" id="login" href="/login">Login</a>
+            <!-- Sign-up page is disabled -->
+            <!-- <a class="nav-item nav-link" id="SignUp" href="/sign-up">Sign Up</a> -->
+          </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header-content">
+            <h1>Step2</h1>
+            <p>Goal: Find the target email address🎯</p>
+        </div>
+    </header>
+    
+    <nav class="nav" style="display: flex; justify-content: center; align-items: center; text-align: center; position: relative;">
+        <ul>
+            <li><a href="{{url_for('auth.tutorial')}}">Home </a></li>
+            <li><a href="{{url_for('auth.step1')}}">Step 1</a></li>
+            <li><a href="{{url_for('auth.step2')}}">Step 2</a></li>
+            <li><a href="{{url_for('auth.step3')}}">Step 3</a></li>
+            <li><a href="{{url_for('auth.step4')}}">Step 4</a></li>
+            <li><a href="{{url_for('auth.step5')}}">Step 5</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section id="step1">
+
+
+          <h2>Understanding Website File Structure🔍</h2>
+          <p>Imagine a website is like a big tree. The <strong>trunk</strong> of the tree is the main website address, like <code>example.com</code>. From there, the tree has <strong>branches</strong> that lead to different places, like folders and files.</p>
+         <br> <img src="{{ url_for('static', filename='images/website-structure.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+         <br> <h2>How the Structure Works⚙️</h2>
+          <ul>
+            <br>
+              <li>The <strong>root</strong> of the tree is the main starting point, represented by just a <code>/</code>. For example, when you visit <code>example.com/</code>, you're looking at the main page.</li>
+              <li><strong>Branches</strong> are like folders. If the website has a folder called <code>home</code>, you can go there by typing <code>example.com/home/</code>.</li>
+              <li>Inside folders, there can be more folders or specific <strong>files</strong>, like a text file or an image.</li>
+          </ul>
+      
+     
+      
+          <p>By understanding this structure, you can navigate websites like an explorer finding treasures! 😊</p>
+
+          <br>
+               <h2>Explore robots.txt🔍</h2> <p>Once you find the robots.txt page, take a look at the hidden web pages listed there.</p> 
+               <p>For example, if you want to access the database, type <code>/database</code> after home directory, as shown in the picture below.</p>
+               <p style="color: rgb(247, 2, 2);">⚠️This is just an example, so you need to use what you found on the robots.txt in step 1.</p>
+               <p>Examples:</p>
+               <img src="{{ url_for('static', filename='images/filenavigate.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+        
+         
+<br>
+                <h2>Action🚨</h2>
+               <p>To explore the hidden pages, add the hidden text you found on the robots.txt page in step 1 after <code>https://rikusandes.pythonanywhere.com/</code> in your browser's address bar. Find the target email adress, and keep looking for theb password. For example, typing one of these paths will take you to that page.
+                </p>
+        
+        
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Tutorial Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>

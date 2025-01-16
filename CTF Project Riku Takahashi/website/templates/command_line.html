@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Line Simulation</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+        }
+        .command-line {
+            padding: 20px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .green {
+            color: #00FF00; /* Green color for typical hacker text */
+        }
+        .yellow {
+            color: #FFFF00; /* Yellow color for warnings or info */
+        }
+        .blue {
+            color: #00BFFF; /* Blue color for system actions */
+        }
+        .red {
+            color: #FF0000; /* Red color for errors or important actions */
+        }
+        .magenta {
+            color: #FF00FF; /* Magenta for sensitive or encrypted data */
+        }
+        .cyan {
+            color: #00FFFF; /* Cyan for system commands */
+        }
+        .white {
+            color: #FFFFFF; /* White for general information */
+        }
+    </style>
+</head>
+<body>
+    <div class="command-line" id="commandLineOutput"></div>
+
+    <script>
+        const commandLineOutput = document.getElementById('commandLineOutput');
+        const commands = [
+            'C:\\Users\\Admin> _\n',
+            'C:\\Users\\Admin> echo "Initializing secure database session..."\n',
+            'C:\\Users\\Admin> echo "Verifying network protocols..."\n',
+            'C:\\Users\\Admin> netstat -an | grep "ESTABLISHED"\n',
+            'C:\\Users\\Admin> echo "Connecting to remote server 192.168.0.100..."\n',
+            'C:\\Users\\Admin> ssh admin@192.168.0.100 -p 22\n',
+            'C:\\Users\\Admin> echo "Secure SSH tunnel established."\n',
+            'C:\\Users\\Admin> curl -X POST --data "user_data" https://api.example.com/submit\n',
+            'C:\\Users\\Admin> echo "User data submitted successfully..."\n',
+            'C:\\Users\\Admin> SELECT * FROM database_logs WHERE user_id = 1002;\n',
+            'C:\\Users\\Admin> echo "Executing SQL injection attempt..."\n',
+            'C:\\Users\\Admin> UPDATE users SET password = "newpassword" WHERE username = "admin";\n',
+            'C:\\Users\\Admin> echo "Encrypted password hash stored successfully."\n',
+            'C:\\Users\\Admin> echo "Retrieving encrypted file: confidential_data.txt"\n',
+            'C:\\Users\\Admin> openssl enc -aes-256-cbc -in confidential_data.txt -out decrypted_data.txt\n',
+            'C:\\Users\\Admin> echo "File decryption successful."\n',
+            'C:\\Users\\Admin> sudo systemctl restart apache2\n',
+            'C:\\Users\\Admin> echo "Apache web server restarted."\n',
+            'C:\\Users\\Admin> tail -f /var/log/apache2/error.log\n',
+            'C:\\Users\\Admin> echo "Watching for suspicious activity..."\n',
+            'C:\\Users\\Admin> ps aux | grep "python3 server.py"\n',
+            'C:\\Users\\Admin> echo "Verifying firewall status..."\n',
+            'C:\\Users\\Admin> ufw status verbose\n',
+            'C:\\Users\\Admin> echo "Firewall rules confirmed." \n',
+            'C:\\Users\\Admin> ip addr show\n',
+            'C:\\Users\\Admin> echo "IP addresses and routing tables fetched."\n',
+            'C:\\Users\\Admin> ping -c 4 192.168.1.1\n',
+            'C:\\Users\\Admin> echo "Ping test successful, network latency: 34ms."\n',
+            'C:\\Users\\Admin> traceroute 8.8.8.8\n',
+            'C:\\Users\\Admin> echo "Traceroute completed, reached 8.8.8.8 in 12 hops."\n',
+            'C:\\Users\\Admin> echo "Analyzing server load..."\n',
+            'C:\\Users\\Admin> top -n 1 | head -n 20\n',
+            'C:\\Users\\Admin> echo "Server load analysis complete."\n',
+            'C:\\Users\\Admin> df -h\n',
+        ];
+
+        let index = 0;
+
+        function showNextCommand() {
+            if (index < commands.length) {
+                const command = commands[index];
+                let colorClass = 'green'; // Default to green for regular text
+
+                // Assign colors based on the content of the command
+                if (command.includes("Initializing") || command.includes("Connecting")) {
+                    colorClass = 'yellow'; // Info or warning commands
+                } else if (command.includes("SELECT") || command.includes("UPDATE")) {
+                    colorClass = 'blue'; // Database commands
+                } else if (command.includes("decrypt") || command.includes("encrypted")) {
+                    colorClass = 'magenta'; // Sensitive data actions
+                } else if (command.includes("error") || command.includes("failed")) {
+                    colorClass = 'red'; // Error or important actions
+                } else if (command.includes("Redirecting") || command.includes("Establishing")) {
+                    colorClass = 'cyan'; // General system actions
+                }
+
+                // Append the command to the output with the selected color
+                const span = document.createElement('span');
+                span.classList.add(colorClass);
+                span.textContent = command;
+                commandLineOutput.appendChild(span);
+
+                // Add a new line for the next command
+                commandLineOutput.appendChild(document.createElement('br'));
+
+                index++;
+                setTimeout(showNextCommand, 150); // Faster speed: 150ms between commands
+            } else {
+                setTimeout(function() {
+                    // Redirect to /secretfile.txt after 500ms
+                    window.location.href = '/db_connect/secret_db_access.log';
+                }, 500);  // Short delay before redirect
+            }
+        }
+
+        showNextCommand(); // Start showing commands
+    </script>
+</body>
+</html>

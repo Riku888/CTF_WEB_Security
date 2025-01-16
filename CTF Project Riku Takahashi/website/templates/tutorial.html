@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+  />
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" id="login" href="/login">Login</a>
+            <!-- Sign-up page is disabled -->
+            <!-- <a class="nav-item nav-link" id="SignUp" href="/sign-up">Sign Up</a> --> 
+          </div>
+        </div>
+    </nav>
+
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Welcome to the Tutorial</h1>
+            <p>Begin Your Cybersecurity Journey with Hands-On Learning</p>
+        </div>
+    </header>
+
+    <nav class="nav" style="display: flex; justify-content: center; align-items: center; text-align: center; position: relative;">
+        <ul>
+    
+            <li><a href="{{url_for('auth.tutorial')}}">Home</a></li>
+            <li><a href="{{url_for('auth.step1')}}">Step 1</a></li>
+            <li><a href="{{url_for('auth.step2')}}">Step 2</a></li>
+            <li><a href="{{url_for('auth.step3')}}">Step 3</a></li>
+            <li><a href="{{url_for('auth.step4')}}">Step 4</a></li>
+            <li><a href="{{url_for('auth.step5')}}">Step 5</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section id="step1">
+            <img src="{{ url_for('static', filename='images/home.jpg') }}" alt="Image for home" style="display: block; margin-left: auto; margin-right: auto;" class="tutorial-image">
+            <h1>Introduction</h1>
+            <p>
+                Welcome to this challenge! Get ready to step into the shoes of a hacker. In this hands-on experience, you will uncover the secrets of web security and learn how to use powerful tools like
+                <code>robots.txt</code> and hash functions to break into a target account.
+            </p>
+            <br>
+            <h2>Goal🎯</h2>
+            <p>
+                Your mission is to navigate the website, discover hidden pages, apply your skills to reveal concealed text, access the database, log into the target account, and retrieve the secret message, such as <code>byu{XXXXXX}</code>.
+            </p>
+            
+            <br>
+            <h2>Key Concepts You'll Learn:✅</h2>
+            <ul>
+                <li><strong>robots.txt</strong>: A file used by websites to provide instructions to web crawlers, telling them which pages or files to access or avoid.</li>
+                <li><strong>Hash Functions</strong>: Cryptographic algorithms that take an input and return a fixed-length string of characters, commonly used in data security, password storage, and digital signatures.</li>
+                <li><strong>Page Inspection</strong>: The process of analyzing a webpage's HTML code and resources (like images, scripts, and forms) to identify hidden or sensitive information that may not be visible to regular users.</li>
+            </ul>
+            <br>
+            <h2>Skills You Will Gain:💪🏼</h2>
+            <ul>
+                <li>How to use <code>robots.txt</code> to discover hidden pages on a website.</li>
+                <li>Understanding hash algorithms and their strengths and vulnerabilities.</li>
+                <li>Techniques for reversing or "unhashing" encrypted data.</li>
+                <li>How to inspect a webpage's HTML code to find hidden information.</li>
+            </ul>
+            
+            <p>Good luck, and enjoy the thrill of the hack! Now, let's dive into Step 1!</p>
+            
+        
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Tutorial Page by Riku Takahashi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+

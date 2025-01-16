@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+    Oh you found it!! <br>
+    User-agent:*
+
+     <br><br>Disallow: /8028f
+     <br>Disallow:/wp-email/
+     <br>Disallow:/top-secretfile
+     <br>Disallow:/user-bin
+
+     <br><br>Allow:/mydog
+    <!-- Your content goes here -->
+    {% endblock %}
+</body>
+</html>

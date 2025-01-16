@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" id="login" href="/login">Login</a>
+            <!-- Sign-up page is disabled -->
+            <!-- <a class="nav-item nav-link" id="SignUp" href="/sign-up">Sign Up</a> -->
+          </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header-content">
+            <h1>Step5</h1>
+            <p>Goal: Log into the target account🎯</p>
+        </div>
+    </header>
+    
+    <nav class="nav" style="display: flex; justify-content: center; align-items: center; text-align: center; position: relative;">
+        <ul>
+            <li><a href="{{url_for('auth.tutorial')}}">Home </a></li>
+            <li><a href="{{url_for('auth.step1')}}">Step 1</a></li>
+            <li><a href="{{url_for('auth.step2')}}">Step 2</a></li>
+            <li><a href="{{url_for('auth.step3')}}">Step 3</a></li>
+            <li><a href="{{url_for('auth.step4')}}">Step 4</a></li>
+            <li><a href="{{url_for('auth.step5')}}">Step 5</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+
+       
+        <img src="{{ url_for('static', filename='images/login.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+        <br>
+        <h2>Action🚨</h2>
+        <p>Now that you have the email and password, log into the account and uncover the secret code! If you get stuck, revisit steps 1, 2, and 3, and take your time. Good luck!</p>
+       <br>
+       <h2>Wrap Up📝</h2>
+       <p>Through this challenge, you’ve learned the following key concepts:</p>
+       <ul>
+           <li><strong style="color: rgb(247, 2, 2);">robots.txt</strong>: <br>A file used by websites to provide instructions to web crawlers, telling them which pages or files to access or avoid.</li>
+           <br><li><strong style="color: rgb(247, 2, 2);">Hash Functions</strong>: <br>Cryptographic algorithms that take an input and return a fixed-length string of characters, commonly used in data security, password storage, and digital signatures.</li>
+           <br><li><strong style="color: rgb(247, 2, 2);">Unhashing</strong>:<br> Techniques for reversing or 'unhashing' encrypted data.</li>
+           <br><li><strong style="color: rgb(247, 2, 2);">Page Inspection</strong>:<br> The process of exploring a webpage's HTML structure to find hidden information or resources. This can involve inspecting the <code>&lt;body&gt;</code> tag for visible content or looking for <code>&lt;form method="POST"&gt;</code> sections that might reveal sensitive data being sent to the server.</li>
+       </ul>
+       <p>These concepts and skills will help you navigate websites, discover hidden information, and understand the importance of data security.</p>
+
+        <br>
+        <h2>Limitless Learning Ahead🚀</h2>
+               <p>You did it! By completing this challenge, you’ve unlocked a glimpse into the fascinating world of hacking and demonstrated your problem-solving skills and determination.</p>
+
+                <p style="text-align: center;"><strong>'The only limit to our realization of tomorrow is our doubts of today.'</strong></p>
+                <p>Let this be a reminder that your potential is limitless when you believe in yourself and embrace the journey of learning. Keep pushing forward, stay curious, and never stop exploring what you can achieve!<p>
+               <img src="{{ url_for('static', filename='images/goal.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+    </body>
+
+   
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Tutorial Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>

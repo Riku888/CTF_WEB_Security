@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Top Secret File</title>
+    <style>
+        body {
+            background-color: black;
+            color: rgb(255, 238, 0);
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/dogpic.jpg') }}" alt="Example of exploring robots.txt" style="display: block; margin: 10px auto;" class="tutorial-image">
+</body>
+</html>

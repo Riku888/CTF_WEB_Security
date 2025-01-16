@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: rgb(0, 213, 255);
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+     <br>
+    Base64 or MD5? 
+
+     <br><br>(1) Tm90IHRoaXMgb25l
+     <br><br>(2) QSBjdXJpb3VzIG1pbmQgaXMgdGhlIGtleSB0byBlbmRsZXNzIHBvc3NpYmlsaXRpZXMu
+     <br><br>(3) L2RiX2Nvbm5lY3Q=
+    {% endblock %}
+</body>
+</html>
